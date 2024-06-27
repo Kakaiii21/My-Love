@@ -1,0 +1,168 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif; 
+  background-color: #F8EFFF;
+}
+
+/* Camera styles */
+.camera {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 100px;
+  background-color: #333;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; 
+}
+
+.camera-body {
+  width: 120px;
+  height: 70px;
+  background-color: #444;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lens {
+  width: 50px;
+  height: 50px;
+  background-color: #000;
+  border-radius: 50%;
+  border: 5px solid #555;
+}
+
+.flash {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: yellow;
+  border-radius: 50%;
+  animation: flash 1s infinite alternate;
+}
+
+
+
+
+@keyframes flash {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Main content styles */
+#main-content {
+  display: none;
+}
+
+.top-head {
+  background-image: url('images/header.jpg');
+  background-size: cover; /* Ensure the image covers the entire header */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  height: 200px; /* Set the height of the header */
+  width: 100%; /* Ensure the header spans the full width */
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+}
+
+@media (max-width: 768px) {
+  .top-head {
+    height: 120px; /* Adjust height for smaller screens if needed */
+    background-size: cover; /* Ensure the image covers the header */
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.film-img {
+  margin-bottom: 20px;
+}
+
+.film-img img {
+  width: auto;
+  height: 1000px;
+  max-width: 100%;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.txt1 {
+  font-family: 'Jacques Francois Shadow', serif;
+  font-size: 100px;
+  text-align: center;
+  margin: 20px;
+}
+.letter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.letter-img {
+  margin-bottom: 20px;
+}
+
+.letter-img img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .popup .content {
+    width: 90%;
+    height: 40%;
+  }
+
+  .camera {
+    width: 120px;
+    height: 80px;
+  }
+
+  .camera-body {
+    width: 100px;
+    height: 60px;
+  }
+
+  .lens {
+    width: 40px;
+    height: 40px;
+  }
+
+  .flash {
+    width: 16px;
+    height: 16px;
+  }
+
+  .top-head {
+    font-size: 24px;
+  }
+
+  .txt1 {
+    font-size: 50px;
+
+  }
+
+}
